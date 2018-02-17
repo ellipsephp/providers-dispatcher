@@ -1,0 +1,44 @@
+{
+    "name": "ellipse/providers-dispatcher",
+    "type": "library",
+    "description": "Provider package for ellipse dispatcher",
+    "keywords": [
+        "psr-15",
+        "dispatcher",
+        "middleware",
+        "request-handler",
+        "callable",
+        "controller"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/ellipsephp/providers-dispatcher",
+    "support": {
+        "issues": "https://github.com/ellipsephp/providers-dispatcher/issues",
+        "source": "https://github.com/ellipsephp/providers-dispatcher"
+    },
+    "authors": [
+        {
+            "name": "pmall",
+            "email": "pierre.mallinjoud@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "container-interop/service-provider": "^0.4.0",
+        "psr/container": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/http-server-handler": "^1.0",
+        "ellipse/providers": "^0.2",
+        "ellipse/dispatcher": "^1.2"
+    },
+    "require-dev": {
+        "kahlan/kahlan": "^4.0",
+        "eloquent/phony-kahlan": "^1.0",
+        "ellipse/container": "^0.4.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ellipse\\Dispatcher\\": "src"
+        }
+    }
+}
