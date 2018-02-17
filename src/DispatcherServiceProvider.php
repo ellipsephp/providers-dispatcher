@@ -75,7 +75,7 @@ class DispatcherServiceProvider implements ServiceProviderInterface
         return new ComposableResolver(
             new ControllerResolver(
                 $reflection,
-                new ControllerResolver(
+                new ContainerResolver(
                     $reflection,
                     new CallableResolver(
                         new DispatcherFactory
