@@ -14,7 +14,7 @@ return [
 
             return $interfaces;
 
-        }
+        },
 
     ]),
 ];
