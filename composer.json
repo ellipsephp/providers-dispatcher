@@ -30,7 +30,7 @@
         "psr/http-server-handler": "^1.0",
         "ellipse/providers": "^0.2",
         "ellipse/providers-installer": "^0.3",
-        "ellipse/dispatcher": "^1.2",
+        "ellipse/dispatcher": "^1.3",
         "ellipse/dispatcher-callable": "^1.0",
         "ellipse/dispatcher-container": "^1.0",
         "ellipse/dispatcher-controller": "^1.0",
