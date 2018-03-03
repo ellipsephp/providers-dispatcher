@@ -11,12 +11,7 @@ use Interop\Container\ServiceProviderInterface;
 
 use Ellipse\Container\ReflectionContainer;
 
-use Ellipse\DispatcherFactory;
 use Ellipse\DispatcherFactoryInterface;
-use Ellipse\Dispatcher\CallableResolver;
-use Ellipse\Dispatcher\ContainerResolver;
-use Ellipse\Dispatcher\ControllerResolver;
-use Ellipse\Dispatcher\ComposableResolver;
 
 class DispatcherServiceProvider implements ServiceProviderInterface
 {
@@ -58,8 +53,7 @@ class DispatcherServiceProvider implements ServiceProviderInterface
     }
 
     /**
-     * Return an instance of ComposableResolver resolving controller, class
-     * names and callables as DispatcherFactoryInterface implementation.
+     * Return an instance of default resolver as DispatcherFactoryInterface.
      *
      * @param \Psr\Container\ContainerInterface $container
      * @return \Ellipse\DispatcherFactoryInterface
@@ -76,17 +70,7 @@ class DispatcherServiceProvider implements ServiceProviderInterface
 
         }
 
-        return new ComposableResolver(
-            new ControllerResolver(
-                $container,
-                new ContainerResolver(
-                    $container,
-                    new CallableResolver(
-                        new DispatcherFactory
-                    )
-                )
-            )
-        );
+        return new DefaultResolver($container);
     }
 
     /**
