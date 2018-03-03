@@ -1,4 +1,4 @@
-# Dispatcher providers package
+# Dispatcher service provider
 
 **Require** php >= 7.1
 

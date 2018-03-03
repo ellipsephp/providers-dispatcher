@@ -5,8 +5,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 use Ellipse\Container;
 use Ellipse\DispatcherFactoryInterface;
-use Ellipse\Container\ReflectionContainer;
-use Ellipse\Dispatcher\DispatcherServiceProvider;
 
 describe('providers.php', function () {
 
@@ -24,20 +22,20 @@ describe('providers.php', function () {
 
         });
 
-        it('should provide an array containing MiddlewareInterface::class and RequestHandlerInterface::class for the ellipse.dispatcher.autowired alias', function () {
+        it('should provide true for the ellipse.dispatcher.autowiring.status alias', function () {
 
-            $test = $this->container->get('ellipse.dispatcher.autowired');
+            $test = $this->container->get('ellipse.dispatcher.autowiring.status');
 
-            expect($test)->toContain(MiddlewareInterface::class);
-            expect($test)->toContain(RequestHandlerInterface::class);
+            expect($test)->toBeTruthy();
 
         });
 
-        it('should provide an instance of ReflectionContainer for the ellipse.dispatcher.container alias', function () {
+        it('should provide an array containing MiddlewareInterface::class and RequestHandlerInterface::class for the ellipse.dispatcher.autowiring.interfaces alias', function () {
 
-            $test = $this->container->get('ellipse.dispatcher.container');
+            $test = $this->container->get('ellipse.dispatcher.autowiring.interfaces');
 
-            expect($test)->toBeAnInstanceOf(ReflectionContainer::class);
+            expect($test)->toContain(MiddlewareInterface::class);
+            expect($test)->toContain(RequestHandlerInterface::class);
 
         });
 
@@ -48,6 +46,7 @@ describe('providers.php', function () {
             expect($test)->toBeAnInstanceOf(DispatcherFactoryInterface::class);
 
         });
+
     });
 
 });

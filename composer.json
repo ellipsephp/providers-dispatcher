@@ -1,13 +1,15 @@
 {
     "name": "ellipse/providers-dispatcher",
     "type": "service-provider",
-    "description": "Provider package for ellipse dispatcher",
+    "description": "Service provider for Ellipse Dispatcher",
     "keywords": [
+        "psr-11",
         "psr-15",
+        "container",
+        "service-provider",
         "dispatcher",
         "middleware",
         "request-handler",
-        "callable",
         "controller"
     ],
     "license": "MIT",
@@ -28,8 +30,7 @@
         "psr/container": "^1.0",
         "psr/http-server-middleware": "^1.0",
         "psr/http-server-handler": "^1.0",
-        "ellipse/providers": "^0.2",
-        "ellipse/providers-installer": "^0.3",
+        "services/installer": "^0.5",
         "ellipse/dispatcher": "^1.2",
         "ellipse/dispatcher-callable": "^1.0",
         "ellipse/dispatcher-container": "^1.0",
