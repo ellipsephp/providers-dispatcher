@@ -20,7 +20,7 @@ abstract class AbstractDecoratedResolver implements DispatcherFactoryInterface
     /**
      * @inheritdoc
      */
-    public function __invoke($handler, iterable $middleware = []): Dispatcher
+    public function __invoke($handler, array $middleware = []): Dispatcher
     {
         return ($this->delegate)($handler, $middleware);
     }

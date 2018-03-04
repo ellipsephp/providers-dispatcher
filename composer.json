@@ -25,16 +25,16 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
+        "php": ">=7.0",
         "container-interop/service-provider": "^0.4.0",
         "psr/container": "^1.0",
         "psr/http-server-middleware": "^1.0",
         "psr/http-server-handler": "^1.0",
         "services/installer": "^0.5",
-        "ellipse/dispatcher": "^1.2",
-        "ellipse/dispatcher-callable": "^1.0",
-        "ellipse/dispatcher-container": "^1.0",
-        "ellipse/dispatcher-controller": "^1.0",
+        "ellipse/dispatcher": "^1.4",
+        "ellipse/dispatcher-callable": "^1.1",
+        "ellipse/dispatcher-container": "^1.1",
+        "ellipse/dispatcher-controller": "^1.1",
         "ellipse/container-reflection": "^1.0"
     },
     "require-dev": {
