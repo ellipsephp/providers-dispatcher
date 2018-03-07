@@ -9,7 +9,7 @@ return [
          * Return wether the dispatcher factory can autoload classes. Default to
          * true.
          */
-        'ellipse.dispatcher.autowiring.status' => function ($container, bool $status): bool {
+        'autowiring.status' => function ($container, bool $status): bool {
 
             return $status;
 
@@ -20,7 +20,7 @@ return [
          * implementing one of them. Default to Psr-15 MiddlewareInterface and
          * RequestHandlerInterface.
          */
-        'ellipse.dispatcher.autowiring.interfaces' => function ($container, array $interfaces): array {
+        'autowiring.interfaces' => function ($container, array $interfaces): array {
 
             return $interfaces;
 

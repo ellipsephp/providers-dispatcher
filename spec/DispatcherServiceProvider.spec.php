@@ -36,7 +36,7 @@ describe('DispatcherServiceProvider', function () {
 
         });
 
-        context('when the DispatcherFactoryInterface::class alias is retrieved from the container', function () {
+        context('when the DispatcherFactoryInterface::class id is retrieved from the container', function () {
 
             context('when the autowiring status is set to false', function () {
 
@@ -82,7 +82,7 @@ describe('DispatcherServiceProvider', function () {
 
         });
 
-        it('should provide true for the ellipse.dispatcher.autowiring.status alias', function () {
+        it('should provide true for the ellipse.dispatcher.autowiring.status id', function () {
 
             $test = $this->container->get('ellipse.dispatcher.autowiring.status');
 
@@ -90,7 +90,7 @@ describe('DispatcherServiceProvider', function () {
 
         });
 
-        it('should provide an array containing MiddlewareInterface::class and RequestHandlerInterface::class for the ellipse.dispatcher.autowiring.interfaces alias', function () {
+        it('should provide an array containing MiddlewareInterface::class and RequestHandlerInterface::class for the ellipse.dispatcher.autowiring.interfaces id', function () {
 
             $test = $this->container->get('ellipse.dispatcher.autowiring.interfaces');
 
